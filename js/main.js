@@ -1,4 +1,6 @@
 import {createMockData} from "./mockData.js";
+import {createArrayPhotos, renderFragmentDOM} from "./renderPictures.js";
 
 const mockData = createMockData();
-console.log(mockData)
+const resultArray = createArrayPhotos(mockData);
+renderFragmentDOM(resultArray);
