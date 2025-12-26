@@ -48,4 +48,3 @@ function createRandomMessage() {
     }
 }
 
-console.log(createMockData())
