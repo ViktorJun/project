@@ -10,13 +10,13 @@ export function createMockData(count = 25) {
             id: index + 1,
             url: `photos/${index + 1}.jpg`,
             description: getRandomString(variables.arrayDescription),
-            likes: getRandomNumber(variables.minLikes, variables.maxLikes),
+            likes: getRandomNumber(variables.likes.min, variables.likes.max),
             comments: getRandomComments()
         }
     });
 }
 function getRandomComments() {
-    const randomNumberComments = getRandomNumber(variables.minNumbComments, variables.maxNumbComments);
+    const randomNumberComments = getRandomNumber(variables.numbComments.min, variables.numbComments.max);
     if (randomNumberComments === 0) {
         return null;
     }else {
@@ -31,7 +31,7 @@ function getRandomComments() {
     }
 }
 function getRandomAvatar() {
-    return `img/avatar-${getRandomNumber(variables.minAvatar, variables.maxAvatar)}.svg`
+    return `img/avatar-${getRandomNumber(variables.avatar.min, variables.avatar.max)}.svg`
 }
 function createRandomMessage() {
     let firstPartLine = getRandomString(variables.arrayMessage);
