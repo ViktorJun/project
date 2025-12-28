@@ -1,9 +1,16 @@
-export const minLikes = 15;
-export const maxLikes = 200;
-export const minAvatar = 1;
-export const maxAvatar = 6;
-export const minNumbComments = 0;
-export const maxNumbComments = 3;
+export const containerForPhoto = document.querySelector('.pictures');
+export const likes = {
+    min: 15,
+    max: 200
+};
+export const avatar = {
+    min: 0,
+    max: 6
+};
+export const numbComments = {
+    min: 0,
+    max: 3
+};
 export const arrayDescription = [
     'Фотографія з красивим заходом сонця над гори.',
     'Веселий момент на святковій вечірці.',
