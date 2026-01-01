@@ -1,10 +1,11 @@
 export const containerForPhoto = document.querySelector('.pictures');
+export const bigPictureCancel = document.querySelector('.big-picture__cancel');
 export const likes = {
     min: 15,
     max: 200
 };
 export const avatar = {
-    min: 0,
+    min: 1,
     max: 6
 };
 export const numbComments = {
