@@ -1,5 +1,8 @@
 export const containerForPhoto = document.querySelector('.pictures');
 export const bigPictureCancel = document.querySelector('.big-picture__cancel');
+export const MAX_LENGTH_SYMBOL_DESCRIPTION = 140;
+export const MAX_COUNT_HASHTAG = 5;
+export const NUMBER_SHOWING_COMMENTS = 5;
 export const likes = {
     min: 15,
     max: 200
@@ -10,7 +13,7 @@ export const avatar = {
 };
 export const numbComments = {
     min: 0,
-    max: 3
+    max: 15
 };
 export const arrayDescription = [
     'Фотографія з красивим заходом сонця над гори.',

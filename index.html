@@ -36,7 +36,7 @@
 
             <!-- Початковий стан поля для завантаження зображення-->
             <fieldset class="img-upload__start">
-              <input type="file" id="upload-file" accept="image/*" class="img-upload__input  visually-hidden" name="filename" required>
+              <input type="file" id="upload-file" accept="image/*" class="img-upload__input  visually-hidden" name="filename" <!--required-->>
               <label for="upload-file" class="img-upload__label  img-upload__control">Завантажити</label>
             </fieldset>
 
@@ -117,7 +117,7 @@
 
                 <!-- Додавання хеш-тегів та коментаря до зображення -->
                 <fieldset class="img-upload__text text">
-                  <input class="text__hashtags" name="hashtags" placeholder="#ХэшТег" required>
+                  <input class="text__hashtags" name="hashtags" placeholder="#ХэшТег"img-upload__text>
                   <textarea class="text__description" name="description" placeholder="Ваш комментарий..."  maxlength="140" ></textarea>
                 </fieldset>
 
@@ -152,7 +152,7 @@
           </div>
 
           <!-- Коментарі до зображення-->
-          <div class="social__comment-count">5 из <span class="comments-count">125</span> комментарів</div>
+          <div class="social__comment-count"><span class="comments-count-show">5</span> из <span class="comments-count">125</span> комментарів</div>
           <ul class="social__comments">
             <li class="social__comment">
               <img class="social__picture" src="img/avatar-4.svg" alt="Аватар на коментарі фотографії" width="35" height="35">
