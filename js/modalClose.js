@@ -1,4 +1,5 @@
 import{resetCommentsState} from './fullScreen.js';
+import {resetUploadFile} from "./uploadOverlay.js";
 
 const uploadFile = document.querySelector('#upload-file');
 const uploadForm = document.querySelector('.img-upload__form');
@@ -11,6 +12,7 @@ export function closeOverlay() {
     document.body.classList.remove('modal-open');
     uploadForm.reset();
     uploadFile.value = '';
+    resetUploadFile();
 }
 export function closeBigPicture() {
     containerBigPicture.classList.add('hidden');
