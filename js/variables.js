@@ -1,8 +1,13 @@
 export const containerForPhoto = document.querySelector('.pictures');
 export const bigPictureCancel = document.querySelector('.big-picture__cancel');
+export const SCALE_STEP = 25;
 export const MAX_LENGTH_SYMBOL_DESCRIPTION = 140;
 export const MAX_COUNT_HASHTAG = 5;
 export const NUMBER_SHOWING_COMMENTS = 5;
+export const scale = {
+    min: 25,
+    max: 100
+};
 export const likes = {
     min: 15,
     max: 200

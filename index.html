@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <script type="module" src="js/main.js"></script>
   <title>Ram</title>
 </head>
 
@@ -117,7 +116,7 @@
 
                 <!-- Додавання хеш-тегів та коментаря до зображення -->
                 <fieldset class="img-upload__text text">
-                  <input class="text__hashtags" name="hashtags" placeholder="#ХэшТег"img-upload__text>
+                  <input class="text__hashtags" name="hashtags" placeholder="#ХэшТег">
                   <textarea class="text__description" name="description" placeholder="Ваш комментарий..."  maxlength="140" ></textarea>
                 </fieldset>
 
@@ -223,5 +222,8 @@
   </template>
 
   <!-- Підключення js-->
+
+  <script src="nouislider/nouislider.js"></script>
+  <script type="module" src="js/main.js"></script>
 </body>
 </html>
