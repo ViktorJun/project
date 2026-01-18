@@ -4,6 +4,8 @@ export const SCALE_STEP = 25;
 export const MAX_LENGTH_SYMBOL_DESCRIPTION = 140;
 export const MAX_COUNT_HASHTAG = 5;
 export const NUMBER_SHOWING_COMMENTS = 5;
+export const COUNT_RANDOM_PICTURE = 10;
+export const imageStartsWith = 'image/';
 export const scale = {
     min: 25,
     max: 100

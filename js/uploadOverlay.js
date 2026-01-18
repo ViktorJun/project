@@ -3,7 +3,6 @@ import {scale, SCALE_STEP} from "./variables.js";
 const scaleSmaller = document.querySelector('.scale__control--smaller');
 const scaleBigger = document.querySelector('.scale__control--bigger');
 const scaleValue = document.querySelector('.scale__control--value');
-const uploadOverlay = document.querySelector('.img-upload__overlay');
 
 const effectOriginal = document.querySelector('#effect-none');
 const effectChrome = document.querySelector('#effect-chrome');
@@ -16,11 +15,6 @@ const uploadEffectLevel = document.querySelector('.img-upload__effect-level');
 const slider = document.querySelector('.effect-level__slider');
 let resultValue = document.querySelector('.effect-level__value').value;
 
-export function openUploadFile(){
-    uploadOverlay.classList.remove('hidden');
-    document.body.classList.add('modal-open');
-    uploadEffectLevel.classList.add('hidden');
-}
 export function handlerScale(event) {
     const target = event.target;
     const value = +scaleValue.value.slice(0, -1);

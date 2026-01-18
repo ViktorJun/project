@@ -4,8 +4,11 @@ import {createMockData} from "./mockData.js";
 import {renderFragmentDOM, createArrayPhotos} from "./renderPictures.js";
 import {validateUploadOverlay, clearValidity} from "./validateUploadOverlay.js";
 import {closeBigPicture, onDocumentKeydown, closeOverlay, stopEscPropagation} from "./modalClose.js";
-import {handlerEffects, handlerScale, openUploadFile, handlerSlider} from "./uploadOverlay.js";
+import {handlerEffects, handlerScale, handlerSlider} from "./uploadOverlay.js";
+import {openUploadFile} from "./uploadOverlayImage.js";
+import {filterButtons, showFilters} from "./filters.js";
 
+const filterContainer = document.querySelector('.img-filters');
 const slider = document.querySelector('.effect-level__slider');
 const containerEffects = document.querySelector('.effects__list');
 const uploadScale = document.querySelector('.img-upload__scale');
@@ -16,10 +19,19 @@ const uploadForm = document.querySelector('.img-upload__form');
 const closeButtonOverlay = document.querySelector('.img-upload__cancel');
 const textHashtags = document.querySelector('.text__hashtags');
 const textDescription = document.querySelector('.text__description');
-const mockData = createMockData();
-const resultArray = createArrayPhotos(mockData);
-renderFragmentDOM(resultArray);
+export let mockData;
 
+async function initGallery(){
+    try {
+        mockData = createMockData();
+        const resultArray = createArrayPhotos(mockData);
+        renderFragmentDOM(resultArray);
+        showFilters();
+    }catch (error){
+        console.log(error.message);
+    }
+}
+initGallery();
 containerForPhoto.addEventListener('click', (event) => {
     const target = +event.target.dataset.id;
     const targetObject = mockData.find(photo => {
@@ -43,4 +55,5 @@ containerUploadOverlay.addEventListener('input', clearValidity);
 uploadScale.addEventListener('click', handlerScale);
 containerEffects.addEventListener('change', handlerEffects);
 slider.noUiSlider.on('update', handlerSlider);
+filterContainer.addEventListener('click', filterButtons);
 
